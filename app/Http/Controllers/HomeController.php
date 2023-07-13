@@ -10,6 +10,6 @@ class HomeController extends Controller
         return view('frontend.home');
     }
      function shop(){
-        return view('frontend.shoppage');
+        return view('frontend.shop');
     }
 }
