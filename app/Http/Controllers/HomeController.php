@@ -11,5 +11,9 @@ class HomeController extends Controller
     }
      function shop(){
         return view('frontend.shop');
+    } 
+    function single(){
+        return view('frontend.single');
     }
+
 }

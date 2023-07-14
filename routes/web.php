@@ -3,6 +3,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,18 +19,14 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, "index"])->name('home');
 Route::get('/home', [HomeController::class, "index"])->name('home');
 Route::get('/shop', [HomeController::class, "shop"])->name('shop');
+Route::get('/single', [HomeController::class, "single"])->name('single');
  
 
 
 
 
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
+Route::middleware(['auth:sanctum',config('jetstream.auth_session'), 'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+Route::get('/dashboard',  [AdminController::class, "index"])->name('dashboard');
 });
