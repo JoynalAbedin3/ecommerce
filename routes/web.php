@@ -29,4 +29,5 @@ Route::get('/single', [HomeController::class, "single"])->name('single');
 Route::middleware(['auth:sanctum',config('jetstream.auth_session'), 'verified'
 ])->group(function () {
 Route::get('/dashboard',  [AdminController::class, "index"])->name('dashboard');
+Route::get('/add-category',  [AdminController::class, "addCategory"])->name('add.category');
 });
