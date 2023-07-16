@@ -56,9 +56,9 @@
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{route('add.category')}}">Add category</a>
-                                    {{-- <a class="nav-link" href="{{route('manage.category')}}">Manage category</a>
-                                    <a class="nav-link" href="{{route('add.product')}}">Add product</a>
-                                    <a class="nav-link" href="{{route('manage.product')}}">Manage Product</a> --}}
+                                    <a class="nav-link" href=" ">Manage category</a>
+                                    <a class="nav-link" href=" ">Add product</a>
+                                    <a class="nav-link" href="  ">Manage Product</a>
                                      
                                 </nav>
                             </div>

@@ -15,11 +15,11 @@ class AdminController extends Controller
         return view('backend.addCategory');
    }
 
-   function storeCategory(Request $req){
+   function store(Request $req){
      
      $category = new Category();
      $category->createCategory($req);
-     return redirect('addCategory');
+      
         
      }
 
