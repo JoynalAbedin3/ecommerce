@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -13,4 +14,16 @@ class AdminController extends Controller
     function addCategory(){
         return view('backend.addCategory');
    }
+
+   function storeCategory(Request $req){
+     
+     $category = new Category();
+     $category->createCategory($req);
+     return redirect('addCategory');
+        
+     }
+
+     
+
+
 }
